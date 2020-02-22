@@ -12,4 +12,6 @@ def load_sound(filename):
     except pygame.error as err:
         print(f'Cannot load image: {filename} : {fullname}')
         raise SystemExit(err)
+    except FileNotFoundError:
+        return NoneSound()
     return sound

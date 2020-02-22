@@ -2,7 +2,7 @@ from pygame import sprite, mouse
 from ..resources_meneger import load_image
 class Fist(sprite.Sprite):
     def __init__(self):
-        super().__init__(self)
+        sprite.Sprite.__init__(self)
         self.image, self.rect = load_image('fist.png', -1)
         self.punching = False
 

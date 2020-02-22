@@ -11,6 +11,6 @@ def load_image(filename, colorkey=None):
     image.convert()
     if colorkey != None:
         if colorkey == -1:
-            colorkey = image.get_at(0,0)
+            colorkey = image.get_at((0,0))
         image.set_colorkey(colorkey, locals.RLEACCEL)
     return image, image.get_rect()
